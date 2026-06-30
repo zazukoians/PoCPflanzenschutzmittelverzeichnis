@@ -1,0 +1,20 @@
+<div class="ob-table-scrollable">
+	<table class="ob-table">
+		<thead>
+			<tr>
+				<th scope="col">{{ "products.table.name" | translate }}</th>
+				<th scope="col">{{ "products.table.type" | translate }}</th>
+				<th scope="col">{{ "products.table.federalAdmissionNumber" | translate }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			@for (product of products(); track product.iri) {
+				<tr>
+					<td>{{ product.label }}</td>
+					<td>{{ getProductTypeTranslationKey(product.productType) | translate }}</td>
+					<td>{{ product.federalAdmissionNumber }}</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

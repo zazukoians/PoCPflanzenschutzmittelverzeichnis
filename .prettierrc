@@ -1,12 +1,20 @@
 {
-  "printWidth": 100,
-  "singleQuote": true,
-  "overrides": [
-    {
-      "files": "*.html",
-      "options": {
-        "parser": "angular"
-      }
-    }
-  ]
+	"overrides": [
+		{
+			"files": "*.ts",
+			"options": {
+				"semi": true,
+				"singleQuote": true,
+				"bracketSpacing": false,
+				"trailingComma": "none",
+				"arrowParens": "avoid"
+			}
+		},
+		{
+			"files": "*.html",
+			"options": {
+				"parser": "angular"
+			}
+		}
+	]
 }

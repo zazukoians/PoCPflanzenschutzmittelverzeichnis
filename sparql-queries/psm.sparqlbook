@@ -1,0 +1,20 @@
+[
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=https://test.lindas.admin.ch/query]\n\nPREFIX psm: <https://agriculture.ld.admin.ch/plant-protection/>\nPREFIX schema: <http://schema.org/> \nSELECT DISTINCT ?firstLetter WHERE {\n    VALUES ?productType {\n        psm:ParallelImport\n        psm:SalePermission\n        psm:RegularProduct\n    }\n    ?s a ?productType. \n    ?s schema:name ?name . \n    BIND(UCASE(SUBSTR(STR(?name), 1, 1)) as ?firstLetter)\n} ORDER by ?firstLetter",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=https://test.lindas.admin.ch/query]\n\nPREFIX psm: <https://agriculture.ld.admin.ch/plant-protection/>\nPREFIX schema: <http://schema.org/> \nSELECT *  WHERE {\n    VALUES ?productType {\n        psm:ParallelImport\n        psm:SalePermission\n        psm:RegularProduct\n    }\n    ?iri a ?productType. \n    ?iri schema:name ?label . \n    BIND(UCASE(SUBSTR(STR(?label), 1, 1)) as ?firstLetter)\n    FILTER(?firstLetter = 'A')\n    ?iri psm:federalAdmissionNumber ?federalAdmissionNumber . \n} ORDER by ?label",
+    "metadata": {}
+  },
+  {
+    "kind": 2,
+    "language": "sparql",
+    "value": "# [endpoint=https://test.lindas.admin.ch/query]\n\nPREFIX psm: <https://agriculture.ld.admin.ch/plant-protection/>\nPREFIX schema: <http://schema.org/> \nSELECT *  WHERE {\n  <https://agriculture.ld.admin.ch/plant-protection/product/8d0dafd3-bbc6-4649-954e-8009f280377a> ?p ?o .\n} ORDER by ?label",
+    "metadata": {}
+  }
+]

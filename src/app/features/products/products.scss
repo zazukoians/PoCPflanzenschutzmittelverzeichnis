@@ -1,0 +1,16 @@
+.letters {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	align-items: center;
+	padding-top: 1rem;
+}
+
+.letters a {
+	padding: 0 0.25rem;
+}
+
+.letters a.active {
+	font-weight: bold;
+	color: var(--ob-primary);
+}

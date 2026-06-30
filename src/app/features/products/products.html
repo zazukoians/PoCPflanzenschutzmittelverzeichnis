@@ -1,0 +1,6 @@
+<div class="letters">
+	@for (letter of firstLetter(); track letter) {
+		<a routerLinkActive="active" [routerLink]="['/products', letter]">{{ letter }}</a>
+	}
+</div>
+<router-outlet />

@@ -1,0 +1,18 @@
+{
+  "topNavigation": {
+    "products": "Produkte"
+  },
+  "products": {
+    "table": {
+      "name": "Name",
+      "type": "Typ",
+      "iri": "IRI",
+      "federalAdmissionNumber": "Zulassungsnummer"
+    },
+    "types": {
+      "ParallelImport": "Parallelimport",
+      "SalePermission": "Verkaufsbewilligung",
+      "RegularProduct": "Reguläres Produkt"
+    }
+  }
+}
